@@ -1,0 +1,15 @@
+{>"layouts/main"/}
+
+{<title}{title} &mdash; Solve a riddle{/title}
+
+
+{<html_body}
+	<h3>The Riddle</h3>
+	<p>{riddle}</p>
+	<p>{syllables}</p>
+	<h3>Your solution</h3>
+	<p>{a}</p>
+	<p>{result}</p>
+{/html_body}
+
+{<copy}{copy|s}{/copy}

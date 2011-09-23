@@ -1,0 +1,19 @@
+{>"layouts/main"/}
+
+{<title}{title} &mdash; Play Hink Pink{/title}
+
+
+{<html_body}
+	<h3>The rules</h3>
+	<p>
+		First, we'll propose a riddle, and the number of syllables allowed. Then you'll have to solve it by giving a response.
+		The response will consist of two words, that will rhyme and will have the number of syllables specified. The number of
+		syllables will be declared by saying hink pink (1), hinky pinky (two), and hinkity pinkety (three).
+	</p>
+	<p>
+		Here's an example: What do you call cold parasites? It's a hink pink. Ice lice!
+	</p>
+	<p><a href="hink">Play</a></p>
+{/html_body}
+
+{<copy}{copy|s}{/copy}

@@ -1,0 +1,55 @@
+HINK - A node.js experiment
+---------------------------
+
+Hink replicates a child's game called Hink Pink, where a puzzlemaster gives another
+person a riddle, and then tells them how long the solution must be. The answer must be
+two words that rhyme, and each must have the same number of syllables, and that
+number must be the same as the puzzlemaster specified.
+
+This is a small project that does the basic functions of an application using
+node.js in an attempt to be simple enough to learn and to extend for a person
+beginning to use node.js. It is not an attempt at production quality code.
+
+The reason that I chose this project was because it would be an excellent choice
+for an online game requiring mostly high concurrency. The hardest work of the app
+would be fetching and storing riddles and answers. An asynchronous engine like node
+would be able to keep many connections going at the same time.
+
+Postgres is a less obvious choice, but the ease of SQL is too great to be ignored.
+
+Prerequisites
+-------------
+
+You will need node.js, npm, and Postgres. This was built using Linux, but presumably
+it will run on any platform that can run these programs.
+
+Installing
+----------
+
+This uses npm, so just run to get the dependancies:
+
+    % npm install
+
+Configuration
+-------------
+
+You will also need to do several things with Postgres (you will find an example in DatabaseInitialization.sql):
+
+    1. Create db and tables
+    2. Create a user
+    3. Create a table
+    4. Modify the environment config to specify connection string
+
+To do the last step, create a file called environment.config.js containing an object like below.
+
+HpEnviron = {
+	hpDbConnString: "tcp://<username>:<password>@localhost/hinky"
+};
+
+Tests
+-----
+
+Hink uses Vows as its testing framework. Under the tests folder, you can run the tests just by
+passing the filename to node, like this:
+
+    % node hink-data.js

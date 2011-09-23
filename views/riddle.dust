@@ -1,0 +1,18 @@
+{>"layouts/main"/}
+
+{<title}{title} &mdash; Solve a riddle{/title}
+
+
+{<html_body}
+	<h3>The Riddle</h3>
+	<p>{riddle}</p>
+	<p>{syllables}</p>
+	<h3>Your solution</h3>
+	<form method="post" action="hink/check">
+		<input type="text" name="a" />
+		<input type="hidden" name="id" value="{id}" />		
+		<input type="submit" value="Go!" />
+	</form>
+{/html_body}
+
+{<copy}{copy|s}{/copy}
